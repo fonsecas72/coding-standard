@@ -1,0 +1,10 @@
+<?xml version="1.0"?><!---->
+<ruleset name="Symfony">
+<description>The Symfony2 coding standard</description>
+
+<exclude-pattern>*/Resources/*</exclude-pattern>
+
+<!-- Include the whole PSR-2 standard which include PSR-1 -->
+<rule ref="PSR2" />
+
+</ruleset>

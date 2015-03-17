@@ -1,0 +1,31 @@
+{
+    "name": "fonsecas72/coding-standard",
+    "description": "The Symfony2 coding standard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomáš Votruba",
+            "email": "tomas.vot@gmail.com",
+            "homepage": "http://tomasvotruba.cz",
+            "name": "Hugo Fonseca",
+            "email": "hdtfonseca@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symfony\\CodingStandard\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfony\\CodingStandard\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5"
+    }
+}
