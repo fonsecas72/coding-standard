@@ -47,7 +47,7 @@ class FooBar
         );
 
         if (true === $dummy)
-            return;
+            $done;
 
         if ('string' === $dummy) {
             if ('values' === $mergedOptions['some_default']) {

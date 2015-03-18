@@ -7,4 +7,6 @@
 <!-- Include the whole PSR-2 standard which include PSR-1 -->
 <rule ref="PSR2" />
 
+<rule ref="Squiz.Strings.ConcatenationSpacing" /><!--Makes sure there are no spaces between the concatenation operator (.) and the strings being concatenated. -->
+
 </ruleset>
