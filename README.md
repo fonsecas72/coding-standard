@@ -4,16 +4,18 @@ WIP
 
 Trying to fill the gaps of other symfony standards.
 
+http://symfony.com/doc/current/contributing/code/standards.html
+
 This has tests to ensure that the symfony coding standard is actually fulfilled.
 
 At the moment there this is missing:
-* properties_before_methods
-* public_methods_first
-* setup_teardown_methods_first
-* expections_sprintf
-* camel_case (for variables, parameters)
-* sufix_exception
-* filename_with_&_char (Use alphanumeric characters and underscores for file names)
-* docblock_all_things
-* docblock_return_flag
-* docblock_package_subpackage_not_used
+
+Structure
+* Declare class properties before methods
+* Declare public methods first, then protected ones and finally private ones.
+The exceptions to this rule are the class constructor and the setUp and tearDown methods of PHPUnit tests,
+which should always be the first methods to increase readability;
+* Exception message strings should be concatenated using sprintf.
+
+Naming Conventions
+* Suffix exceptions with Exception
