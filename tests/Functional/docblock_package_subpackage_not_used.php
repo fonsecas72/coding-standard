@@ -32,6 +32,7 @@ class FooBar
     }
 
     /**
+     * @package thing
      * @param string $dummy Some argument description
      * @param array  $options
      *
