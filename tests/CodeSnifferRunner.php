@@ -15,10 +15,10 @@ class CodeSnifferRunner
     /**
      * @param string $sniff
      */
-    public function __construct($sniff)
+    public function __construct($sniff = array())
     {
         $this->codeSniffer = new PHP_CodeSniffer;
-        $this->codeSniffer->initStandard(__DIR__ . '/../src/Symfony/ruleset.xml', [$sniff]);
+        $this->codeSniffer->initStandard(__DIR__ . '/../src/Symfony/ruleset.xml', $sniff);
     }
 
     /**
