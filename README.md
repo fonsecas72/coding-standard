@@ -8,7 +8,7 @@ http://symfony.com/doc/current/contributing/code/standards.html
 
 This has tests to ensure that the symfony coding standard is actually fulfilled.
 
-At the moment there this is missing:
+At the moment this are the things missing:
 
 Structure
 * Declare class properties before methods
