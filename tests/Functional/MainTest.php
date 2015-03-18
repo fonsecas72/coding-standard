@@ -24,7 +24,7 @@ class MainTest extends PHPUnit_Framework_TestCase
             // Structure
             array(0, 'correct.php'),
             array(4, 'space_comma.php'),
-            array(4, 'single_space_binary.php'),
+            array(5, 'single_space_binary.php'),
             array(3, 'unary_operators_adjacent.php'),
             array(1, 'array_comma.php'),
             array(1, 'line_before_return.php'),

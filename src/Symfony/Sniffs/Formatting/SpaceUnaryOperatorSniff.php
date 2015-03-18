@@ -27,7 +27,6 @@
 class Symfony_Sniffs_Formatting_SpaceUnaryOperatorSniff implements PHP_CodeSniffer_Sniff
 {
 
-
     /**
      * Returns an array of tokens this test wants to listen for.
      *
@@ -38,6 +37,7 @@ class Symfony_Sniffs_Formatting_SpaceUnaryOperatorSniff implements PHP_CodeSniff
          return array(
                  T_DEC,
                  T_INC,
+                 T_BOOLEAN_NOT
                 );
 
     }//end register()

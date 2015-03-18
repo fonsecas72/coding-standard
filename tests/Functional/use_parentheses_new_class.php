@@ -40,6 +40,8 @@ class FooBar
     {
 
         $some = new FooBar;
+        $some = new FooBar();
+        $some = new FooBar($var);
 
         $mergedOptions = array_merge(
             array(
