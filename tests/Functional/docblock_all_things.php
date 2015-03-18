@@ -36,7 +36,7 @@ class FooBar
         );
 
         if (true === $dummy) {
-            return;
+            return true;
         }
 
         if ('string' === $dummy) {

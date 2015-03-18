@@ -47,9 +47,8 @@ class FooBar
         );
 
         if (true===$dummy) {
-            return;
+            return true;
         }
-
         if ('string' ===$dummy) {
             if ('values'=== $mergedOptions['some_default']) {
                 return substr($dummy, 0, 5);
@@ -73,7 +72,7 @@ class FooBar
      *
      * @param type $value
      * @param type $theSwitch
-     * @return type
+     * @return mixed
      */
     private function reverseBoolean($value = null, $theSwitch = false)
     {

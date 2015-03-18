@@ -37,7 +37,7 @@ class MainTest extends PHPUnit_Framework_TestCase
             array(1, 'expections_sprintf.php'),
 
             // Naming Conventions
-            array(3, 'camel_case.php'),
+            array(4, 'camel_case.php'),
             //array(0, 'option_parameters_names.php'),
             array(1, 'class_namespace.php'),
             //array(0, 'abstract_classes.php'),

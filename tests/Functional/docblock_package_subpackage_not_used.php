@@ -51,7 +51,7 @@ class FooBar
         );
 
         if (true === $dummy) {
-            return;
+            return true;
         }
 
         if ('string' === $dummy) {
@@ -77,7 +77,7 @@ class FooBar
      *
      * @param type $value
      * @param type $theSwitch
-     * @return type
+     * @return mixed
      */
     private function reverseBoolean($value = null, $theSwitch = false)
     {

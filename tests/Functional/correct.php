@@ -21,7 +21,9 @@ class FooBar
     private $fooBar;
 
     /**
-     * @param string $dummy Some argument description
+     * sasa
+     *
+     * @param string $dummy ssasa
      */
     public function __construct($dummy)
     {
@@ -47,7 +49,7 @@ class FooBar
         );
 
         if (true === $dummy) {
-            return;
+            return true;
         }
 
         if ('string' === $dummy) {
@@ -73,12 +75,12 @@ class FooBar
      *
      * @param type $value
      * @param type $theSwitch
-     * @return type
+     * @return mixed
      */
     private function reverseBoolean($value = null, $theSwitch = false)
     {
         if (!$theSwitch) {
-            return;
+            return true;
         }
 
         return !$value;

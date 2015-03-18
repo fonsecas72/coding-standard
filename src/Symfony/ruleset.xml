@@ -16,12 +16,5 @@
     <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
 </rule>
 
-<rule ref="PEAR.Commenting.FunctionComment.Missing">
-    <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
-    <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamType"/>
-    <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamName"/>
-    <exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/>
-</rule>
-
 
 </ruleset>
