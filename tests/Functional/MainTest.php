@@ -48,7 +48,7 @@ class MainTest extends PHPUnit_Framework_TestCase
             array(5, 'docblock_type_hint.php'),
 
             // Documentation
-            array(1, 'docblock_all_things.php'),
+            array(3, 'docblock_all_things.php'),
             array(2, 'docblock_return_flag.php'),
             array(2, 'docblock_package_subpackage_not_used.php'),
         );

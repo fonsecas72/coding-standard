@@ -69,6 +69,12 @@ class FooBar
         throw new \RuntimeException(sprintf('Unrecognized dummy option "%s"', $dummy));
     }
 
+    /**
+     *
+     * @param type $value
+     * @param type $theSwitch
+     * @return type
+     */
     private function reverseBoolean($value = null, $theSwitch = false)
     {
         if (!$theSwitch) {
@@ -79,6 +85,9 @@ class FooBar
     }
 }
 
+/**
+ *
+ */
 class ClassName
 {
 

@@ -89,7 +89,7 @@ class FooBar
      *
      * @param integer $int
      * @param double  $double
-     * @param real    $double
+     * @param real    $real
      */
     private function moreTypeHints($int, $double, $real)
     {

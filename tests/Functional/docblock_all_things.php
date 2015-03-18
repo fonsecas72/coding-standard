@@ -11,9 +11,6 @@
 
 namespace Acme;
 
-/**
- * Coding standards demonstration.
- */
 class FooBar
 {
     const SOME_CONST = 42;
@@ -28,14 +25,6 @@ class FooBar
         $this->fooBar = $this->transformText($dummy);
     }
 
-    /**
-     * @param string $dummy Some argument description
-     * @param array  $options
-     *
-     * @return string|null Transformed input
-     *
-     * @throws \RuntimeException
-     */
     private function transformText($dummy, array $options = array())
     {
         $mergedOptions = array_merge(
