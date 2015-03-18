@@ -15,6 +15,7 @@ namespace Acme;
  * Coding standards demonstration.
  * @package name
  * @subpackage name
+ * @author SomeOne <some@thing.com>
  */
 class FooBar
 {

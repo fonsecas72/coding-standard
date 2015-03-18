@@ -8,23 +8,19 @@
 <rule ref="PSR2" />
 
 <rule ref="Squiz.Strings.ConcatenationSpacing" /><!--Makes sure there are no spaces between the concatenation operator (.) and the strings being concatenated. -->
-<rule ref="Squiz.Commenting.ClassComment" /><!-- -->
+<rule ref="Squiz.Commenting.ClassComment" >
+    <exclude name="Squiz.Commenting.ClassComment.TagNotAllowed"/>
+</rule>
+
+<rule ref="Squiz.NamingConventions.ValidVariableName" >
+    <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+</rule>
 
 <rule ref="PEAR.Commenting.FunctionComment.Missing">
-    
-</rule>
-
-<rule ref="PEAR.Commenting.FunctionComment.MissingParamComment">
-    <severity>0</severity>
-</rule>
-<rule ref="PEAR.Commenting.FunctionComment.SpacingAfterParamType">
-    <severity>0</severity>
-</rule>
-<rule ref="PEAR.Commenting.FunctionComment.SpacingAfterParamName">
-    <severity>0</severity>
-</rule>
-<rule ref="PEAR.Commenting.FunctionComment.MissingReturn">
-    <severity>0</severity>
+    <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
+    <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamType"/>
+    <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamName"/>
+    <exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/>
 </rule>
 
 
