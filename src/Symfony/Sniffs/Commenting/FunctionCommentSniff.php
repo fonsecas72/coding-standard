@@ -17,7 +17,7 @@
  * @package  PHP_CodeSniffer
  * @link     http://pear.php.net/package/PHP_CodeSniffer
  */
-class Symfony_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sniff
+class Beubi_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sniff
 {
 
     /**
@@ -151,6 +151,7 @@ class Symfony_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_
         $methodName      = strtolower(ltrim($methodName, '_'));
 
         $return = null;
+        $param = null;
         foreach ($tokens[$commentStart]['comment_tags'] as $pos => $tag) {
             if ($tokens[$tag]['content'] === '@return') {
                 if ($return !== null) {
@@ -160,6 +161,14 @@ class Symfony_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_
                 }
 
                 $return = $tag;
+                // Any strings until the next tag belong to this comment.
+                if (isset($tokens[$commentStart]['comment_tags'][($pos + 1)]) === true) {
+                    $end = $tokens[$commentStart]['comment_tags'][($pos + 1)];
+                } else {
+                    $end = $tokens[$commentStart]['comment_closer'];
+                }
+            } elseif ($tokens[$tag]['content'] === '@param') {
+                $param = $tag;
                 // Any strings until the next tag belong to this comment.
                 if (isset($tokens[$commentStart]['comment_tags'][($pos + 1)]) === true) {
                     $end = $tokens[$commentStart]['comment_tags'][($pos + 1)];
@@ -226,6 +235,31 @@ class Symfony_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_
                     }//end if
                 }//end if
             }//end if
+            if ($param !== null) {
+                $type = explode(' ', $tokens[($param + 2)]['content'])[0];
+                // Check return type (can be multiple, separated by '|').
+                $typeNames      = explode('|', $type);
+                $suggestedNames = array();
+                foreach ($typeNames as $i => $typeName) {
+                    $suggestedName = $this->suggestType($typeName);
+                    if (in_array($suggestedName, $suggestedNames) === false) {
+                        $suggestedNames[] = $suggestedName;
+                    }
+                }
+
+                $suggestedType = implode('|', $suggestedNames);
+                if ($type !== $suggestedType) {
+                    $error = 'Function param type "%s" is invalid';
+                    $error = 'Expected "%s" but found "%s" for function return type';
+                    $data  = array(
+                            $suggestedType,
+                            $type,
+                           );
+                    $phpcsFile->addError($error, $param, 'InvalidReturn', $data);
+                }
+
+            }
+
         } else {
             // No return tag for constructor and destructor.
             if ($return !== null) {
